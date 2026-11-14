@@ -1,0 +1,24 @@
+#hero { padding: 130px 0 80px; min-height: 100svh; display: flex; align-items: center; }
+.hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(32px, 6vw, 90px); align-items: center; }
+.hero-text { display: grid; gap: 26px; justify-items: start; }
+.status { display: inline-flex; align-items: center; gap: 10px; &::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); } }
+h1 { font-size: clamp(2.6rem, 6.4vw, 5.4rem); line-height: 1; max-width: 13ch; em { color: var(--accent); font-variation-settings: 'SOFT' 100, 'WONK' 1; } }
+.hero-text p { font-size: 1.15rem; max-width: 46ch; margin: 0; }
+.actions { display: flex; gap: 28px; flex-wrap: wrap; font-size: 1.02rem; }
+.facts-line { font: 400 0.8rem var(--mono) !important; color: var(--faint) !important; span { white-space: nowrap; } }
+
+.portrait { position: relative; display: grid; justify-items: center; gap: 18px; perspective: 1200px; }
+.hero-note { position: absolute; top: -6px; left: -2%; z-index: 2; svg { transform: rotate(8deg); } }
+.stage { width: min(100%, 420px); }
+.rig { will-change: transform; transform-style: preserve-3d; }
+.me { position: relative; width: 100%; aspect-ratio: 640 / 830; }
+.mi { width: 100%; height: auto; transition: opacity 0.5s; &.gone { opacity: 0; } }
+// max-width: none is essential: base.scss caps every canvas at 100%, which squashed this one and shifted the portrait on hover
+#dz { position: absolute; left: -35%; top: -35%; width: 170%; height: 170%; max-width: none; max-height: none; pointer-events: none; opacity: 0; transition: opacity 0.5s; &.on { opacity: 1; } }
+.dissolve-btn { font: 400 0.78rem var(--mono); color: var(--faint); background: none; border: 0; cursor: pointer; padding: 4px 0; &:hover, &[aria-pressed='true'] { color: var(--ink); } }
+
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  #hero { padding-top: 110px; }
+  .stage { width: min(78%, 340px); }
+}

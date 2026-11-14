@@ -1,0 +1,57 @@
+// Space stickers: black-and-white halftone cut-outs scattered in the margins, like stickers
+// stuck onto a dark notebook. They bleed off the viewport edge or sit in free space, never
+// over copy, and are tuned per breakpoint.
+
+section { overflow-x: clip; }          // lets stickers bleed off the edge without a horizontal scrollbar
+section > .w { position: relative; z-index: 1; }   // all copy sits above the stickers
+
+.doodle {
+  position: absolute;
+  z-index: 0;
+  width: var(--w);
+  transform: rotate(var(--r, 0deg));
+  pointer-events: none;
+  user-select: none;
+  opacity: var(--o, 1);
+  .dp { display: block; will-change: transform; }
+  img { width: 100%; height: auto; -webkit-user-drag: none; }
+  // dark-on-dark pieces get a faint warm rim so their silhouette reads against the page
+  &.glow img { filter: drop-shadow(0 0 1px rgba(235, 230, 220, 0.4)) drop-shadow(0 0 26px rgba(224, 134, 90, 0.14)); }
+  &.drift img { animation: drift var(--t, 11s) ease-in-out var(--d, 0s) infinite alternate; }
+}
+@keyframes drift {
+  from { transform: translate3d(0, 0, 0) rotate(0deg); }
+  to   { transform: translate3d(0, -10px, 0) rotate(2.5deg); }
+}
+
+// Hero: Saturn bleeds off the top right, the rocket climbs toward it, the satellite anchors the lower right.
+.d-saturn    { --w: clamp(112px, 15vw, 230px); --r: -12deg; right: -2.5vw; top: 10%; }
+.d-rocket    { --w: clamp(48px, 5.6vw, 84px);  --r: 0deg;   left: 46%;     bottom: 5%; }
+.d-satellite { --w: clamp(84px, 9vw, 140px);   --r: 8deg;   right: 3.5vw;  bottom: 8%; --t: 13s; }
+
+// About
+.d-asteroid  { --w: clamp(104px, 13vw, 200px); --r: 18deg;  right: -3vw; top: 9%; }
+
+// Work: a faint debris field hanging off the section's top-right corner
+.d-debris    { --w: clamp(170px, 24vw, 360px); --r: -6deg; --o: 0.55; --t: 16s; right: -5vw; top: -60px; }
+
+// Skills
+.d-crystal   { --w: clamp(72px, 9vw, 132px);   --r: -6deg;  right: 7vw; top: clamp(40px, 7vw, 96px); }
+
+// Contact: the astronaut floats beside "say hello"
+.d-astronaut { --w: clamp(120px, 15vw, 230px); --r: 14deg;  right: 6vw; top: 12%; --t: 12s; --d: -3s; }
+
+@media (max-width: 1100px) {
+  .d-satellite { right: 2vw; }
+  .d-astronaut { right: 3vw; }
+}
+
+@media (max-width: 860px) {
+  .d-saturn    { --w: 88px; right: -20px; top: 47%; bottom: auto; }
+  .d-rocket    { display: none; }
+  .d-satellite { display: none; }
+  .d-asteroid  { --w: 92px; right: -26px; top: 4%; }
+  .d-debris    { --w: 190px; --o: 0.4; right: -60px; top: -40px; }
+  .d-crystal   { --w: 64px; right: 16px; top: 36px; }
+  .d-astronaut { --w: 92px; right: 8px; top: -34px; }
+}

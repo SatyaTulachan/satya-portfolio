@@ -1,0 +1,8 @@
+.playbox { display: grid; gap: 30px; h2 { margin: 12px 0 14px; } }
+.keys { display: flex; flex-wrap: wrap; gap: 10px 26px; font-size: 0.9rem; color: var(--mute); kbd { font: 400 0.78rem var(--mono); color: var(--ink); border: 1px solid var(--line); border-radius: 5px; padding: 2px 8px; margin-right: 8px; } }
+.arena { position: relative; height: clamp(220px, 30vw, 280px); border: 1px solid var(--line); border-radius: 6px; background: var(--bg-2); overflow: hidden; cursor: pointer; touch-action: manipulation; outline: none;
+  &:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  #rn { position: absolute; inset: 0; width: 100%; height: 100%; }
+}
+.hud { position: absolute; top: 12px; left: 16px; right: 16px; display: flex; justify-content: space-between; font: 400 0.78rem var(--mono); color: var(--mute); pointer-events: none; }
+.overlay { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 16px; background: rgba(14, 13, 12, 0.72); b { font: 400 1.7rem var(--serif); } }

@@ -1,0 +1,8 @@
+.contact { position: relative; h2 { margin-bottom: 18px; max-width: 16ch; } p { font-size: 1.15rem; }
+  > div:not(.socials) { position: relative; display: inline-block; margin-top: 8px; }
+}
+.email { font: 400 clamp(1.3rem, 3.6vw, 2.4rem) var(--serif); color: var(--ink); background: none; border: 0; border-bottom: 1px solid var(--accent); padding: 0 0 6px; cursor: pointer; display: inline-flex; align-items: baseline; gap: 16px; text-align: left; word-break: break-all; transition: color 0.2s; &:hover { color: var(--accent); } }
+.contact-note { position: absolute; left: calc(100% + 14px); top: 4px; white-space: nowrap; svg { transform: scaleY(-1) rotate(10deg); } }
+.socials { display: flex; gap: 28px; margin-top: 34px; }
+footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-top: clamp(70px, 10vw, 130px); padding-top: 22px; border-top: 1px solid var(--line); }
+@media (max-width: 1000px) { .contact-note { display: none; } }
