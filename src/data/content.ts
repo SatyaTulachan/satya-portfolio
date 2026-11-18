@@ -1,8 +1,8 @@
 export const SITE = {
   name: 'Satya Tulachan',
-  title: 'Satya Tulachan — Java Full Stack Developer',
+  title: 'Satya Tulachan — Full Stack Developer',
   description:
-    'Satya Tulachan, Java Full Stack Developer in Kathmandu. Spring Boot, React, MySQL, Docker and AI integration.',
+    'Satya Tulachan, Full Stack Developer in Kathmandu. React, Spring Boot, MySQL, Docker, CI with GitHub Actions and AI integration. Learning the MERN stack.',
   email: 'tulachansatya26@gmail.com',
   github: 'https://github.com/SatyaTulachan',
   linkedin: 'https://www.linkedin.com/in/satya-tulachan-a119831a1/',
@@ -18,10 +18,10 @@ export const NAV = [
 ];
 
 export const FACTS = [
-  { label: 'Studying', text: 'BSc (Hons) IT at Techspire College, 2024 – 2027' },
-  { label: 'Focus', text: 'Backend engineering: Java, Spring Boot, MySQL' },
-  { label: 'Certified', text: 'Java and React, plus an Agentic AI workshop' },
-  { label: 'Learning now', text: 'AWS, Terraform, Spring Security and JWT' },
+  { label: 'Studying', text: 'Bachelor of Honors in IT at Techspire College, CGPA 3.63 / 4.0, graduating Nov 2027' },
+  { label: 'Focus', text: 'Full stack: React, Spring Boot and MySQL, owning features from UI to database' },
+  { label: 'Certified', text: 'Java, React, Prompt Engineering and an Agentic AI workshop' },
+  { label: 'Learning now', text: 'MERN stack at Leapfrog Connect, Spring Security and JWT, cloud deployment' },
 ];
 
 export type Project = {
@@ -35,22 +35,36 @@ export type Project = {
 export const PROJECTS: Project[] = [
   {
     title: 'Restaurant Management System',
-    kind: 'Java · Spring Boot · React',
-    desc: 'Menus, tables and orders for Sundhara Thakali Chulho, with transactions keeping orders, totals and table status consistent.',
-    tags: ['REST API', 'MySQL', 'Docker', 'Kubernetes'],
+    kind: 'React · Spring Boot · MySQL',
+    desc: 'A full stack app for Sundhara Thakali Chulho: a React frontend on Spring Boot REST APIs with CRUD, validation and global exception handling. Transactions make order creation, totals and table status succeed or fail together. A GitHub Actions pipeline runs backend tests against a MySQL service container on every push, and Docker Compose ships with a runbook.',
+    tags: ['JPA / Hibernate', 'Docker Compose', 'GitHub Actions'],
     links: [{ label: 'Code on GitHub', href: 'https://github.com/SatyaTulachan/Restaurant' }],
   },
   {
-    title: 'GRYPHX AI Assistant',
+    title: 'YECCU E-Commerce Platform',
+    kind: 'Full stack · Team project',
+    desc: 'Built product listing and blog modules and responsive UI components with a development team, including the Blog and About Us pages of the live site yeccu.com.',
+    tags: ['Responsive UI', 'Git & GitHub', 'E-commerce'],
+    links: [{ label: 'Visit the site', href: 'https://yeccu.com' }],
+  },
+  {
+    title: 'GRYPHX WhatsApp Assistant',
     kind: 'Python · Flask · Llama 3.3 70B',
-    desc: 'A WhatsApp shopping assistant with intent classification, a conversation state machine and answers grounded in catalogue data.',
-    tags: ['Twilio', 'Groq', 'Webhooks'],
+    desc: 'An AI shopping assistant for my streetwear brand. A Twilio webhook feeds an LLM that answers only from catalogue data, and conversation state is saved to disk so chats resume after a restart.',
+    tags: ['Twilio WhatsApp', 'Groq', 'Prompt design'],
     links: [{ label: 'Code on GitHub', href: 'https://github.com/SatyaTulachan/gryphx-ai-chatbot' }],
+  },
+  {
+    title: 'Sales Data Warehouse',
+    kind: 'Python · pandas · PostgreSQL',
+    desc: 'An ETL pipeline that cleans 9,800 raw sales records and loads them into a PostgreSQL star schema (1 fact table, 4 dimensions). Reporting queries use CTEs and window functions, and indexes with EXPLAIN (ANALYZE, BUFFERS) cut one query from about 44 ms to 0.23 ms on a 1.96M-row table.',
+    tags: ['SQLAlchemy', 'Star schema', 'Query tuning'],
+    links: [{ label: 'Code on GitHub', href: 'https://github.com/SatyaTulachan/sales-etl-warehouse' }],
   },
   {
     title: 'QueueLess+',
     kind: 'Figma · UI/UX',
-    desc: 'A ticketing prototype that cuts waiting at public services with online booking and live ticket tracking.',
+    desc: 'A high-fidelity UI/UX prototype for a ticketing system, with online booking and ticket tracking.',
     tags: ['Prototype', 'Booking flow'],
     links: [
       {
@@ -59,20 +73,13 @@ export const PROJECTS: Project[] = [
       },
     ],
   },
-  {
-    title: 'Yeccu.com',
-    kind: 'Frontend · UI',
-    desc: 'Designed and built the Blog and About Us pages of a live website.',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    links: [{ label: 'Visit the site', href: 'https://yeccu.com' }],
-  },
 ];
 
 export const SKILLS = [
-  { label: 'Backend', items: ['Java', 'Spring Boot', 'JPA', 'Hibernate', 'Flask', 'REST'] },
-  { label: 'Frontend', items: ['React', 'Vite', 'JavaScript', 'HTML5', 'CSS3', 'Figma'] },
-  { label: 'Data', items: ['MySQL', 'SQL', 'Transactions', 'Schema design'] },
-  { label: 'DevOps', items: ['Docker', 'Compose', 'Kubernetes', 'GitHub Actions', 'Linux'] },
-  { label: 'AI', items: ['LLM integration', 'Groq', 'Llama 3.3', 'Prompting'] },
-  { label: 'Tools', items: ['Git', 'GitHub', 'Maven', 'IntelliJ', 'VS Code'] },
+  { label: 'Frontend', items: ['React (Vite)', 'JavaScript', 'HTML', 'CSS', 'Responsive UI', 'Figma'] },
+  { label: 'Backend & APIs', items: ['Spring Boot', 'Spring Data JPA', 'Hibernate', 'Flask', 'REST design', 'Validation', 'Exception handling'] },
+  { label: 'Databases', items: ['MySQL', 'PostgreSQL', 'Schema design', 'Transactions', 'Indexes', 'CTEs', 'Window functions', 'EXPLAIN ANALYZE'] },
+  { label: 'Languages', items: ['Java', 'Python (pandas, SQLAlchemy)', 'JavaScript', 'C'] },
+  { label: 'DevOps & Tools', items: ['Git', 'GitHub', 'GitHub Actions (CI)', 'Docker', 'Docker Compose', 'Linux CLI'] },
+  { label: 'AI & Integrations', items: ['Groq (Llama 3.3 70B)', 'Twilio WhatsApp API', 'Prompt engineering'] },
 ];

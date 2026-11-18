@@ -61,15 +61,15 @@ export default function Hero() {
             Hi, I’m Satya. I build reliable software, <em>front to back.</em>
           </motion.h1>
           <motion.p variants={rise}>
-            I’m a Java Full Stack Developer working with Spring Boot, React and MySQL, and I’m getting deeper into cloud,
-            DevOps and AI.
+            I’m a full stack developer working with React, Spring Boot and MySQL. I’m now adding the MERN stack and cloud
+            deployment, and I like owning a feature from the UI all the way to the database.
           </motion.p>
           <motion.div variants={rise} className="actions">
             <a className="link" href="#work">See my work</a>
             <a className="link" href="#contact">Get in touch</a>
           </motion.div>
           <motion.p variants={rise} className="facts-line">
-            <span>BSc (Hons) IT</span> · <span>Graduating 2027</span> · <span>CGPA 3.63 / 4.00</span>
+            <span>Honors in IT</span> · <span>Graduating Nov 2027</span> · <span>CGPA 3.63 / 4.00</span>
           </motion.p>
         </motion.div>
 

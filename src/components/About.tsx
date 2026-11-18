@@ -13,10 +13,11 @@ export default function About() {
         <div className="about-body">
           <div data-reveal>
             <p>
-              I’m an IT undergraduate at Techspire College, spending my time where software engineering, backend systems and AI
-              meet. I build REST APIs, design relational databases and ship apps with Docker, Kubernetes and GitHub Actions.
+              I’m an IT undergraduate at Techspire College with hands-on full stack experience: React frontends, REST APIs in
+              Spring Boot and Flask, and relational databases in MySQL and PostgreSQL. I ship with Docker Compose and GitHub
+              Actions, and I’ve kept teams disciplined and united across 20+ group projects.
             </p>
-            <p>I want to grow into a full stack engineer who designs software that is reliable, scalable and easy to use.</p>
+            <p>I’m looking for a full stack developer role where I can own features from UI to database, while I keep growing in cloud deployment.</p>
           </div>
           <dl className="facts" data-reveal>
             {FACTS.map((f) => (

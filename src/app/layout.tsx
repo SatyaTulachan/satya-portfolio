@@ -31,7 +31,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: SITE.name,
-  jobTitle: 'Java Full Stack Developer',
+  jobTitle: 'Full Stack Developer',
   email: `mailto:${SITE.email}`,
   address: { '@type': 'PostalAddress', addressLocality: 'Kathmandu', addressCountry: 'NP' },
   sameAs: [SITE.github, SITE.linkedin],
